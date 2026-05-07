@@ -1,0 +1,9 @@
+# Auto detect text files and perform LF normalisation
+* text=auto
+
+# Jupyter notebooks — treat as binary to avoid noisy diffs on cell outputs
+*.ipynb binary
+
+# Model artefacts — binary
+*.keras binary
+*.pkl binary
