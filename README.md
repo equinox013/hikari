@@ -7,18 +7,6 @@
 
 ---
 
-## The Names
-
-The three components are named after characters from *Interviews with Monster Girls* (*Demi-chan wa Kataritai*) — an anime about a high school teacher who genuinely wants to understand the demi-humans in his class. It felt right for a project built around *listening* to people at their most frustrated. The names also happen to backronym perfectly into their actual technical roles, which I consider a minor victory.
-
-| Name | Character | Role in pipeline | Expanded acronym |
-|------|-----------|-----------------|-----------------|
-| **MACHI** | Kyoko Machi — the dullahan, a being defined by *separation* | Separates PII from the rest of the text | **M**asking **A**lgorithm for **C**ontextual & **H**euristic **I**dentification |
-| **HIMARI** | Himari Takanashi — the ordinary human twin, the *translator* between worlds | Translates raw verbatims into something the model can understand | **H**euristic **I**nput **M**apping & **A**rray **R**eduction **I**nterface |
-| **HIKARI** | Hikari Takanashi — the vampire, *perceptive* and direct | Perceives the complaint driver signal in preprocessed text | **H**igh-dimensional **I**nference & **K**ey-driver **A**nalysis **R**outing **I**ntelligence |
-
----
-
 ## Table of Contents
 
 1. [Project Overview](#1-project-overview)
@@ -502,3 +490,15 @@ def predict_drivers(req: Request):
 - **Active learning loop** — route low-confidence predictions (`max_prob < 0.6`) back to a human review queue for new labelled data.
 - **Confidence calibration** — sigmoid outputs are not calibrated probabilities; Platt scaling or isotonic regression could improve reliability.
 - **MACHI v2 CRF retraining notebook** — a dedicated training notebook for the deployed CRF (`machi_v2.pkl`) would complete the documentation trail.
+
+---
+
+## The Names
+
+The three components are named after characters from *Interviews with Monster Girls* (*Demi-chan wa Kataritai*) — an anime about a high school teacher who genuinely wants to understand the demi-humans in his class. It felt right for a project built around *listening* to people at their most frustrated. The names also happen to backronym perfectly into their actual technical roles, which I consider a minor victory.
+
+| Name | Character | Role in pipeline | Expanded acronym |
+|------|-----------|-----------------|-----------------|
+| **MACHI** | Kyoko Machi — the dullahan, a being defined by *separation* | Separates PII from the rest of the text | **M**asking **A**lgorithm for **C**ontextual & **H**euristic **I**dentification |
+| **HIMARI** | Himari Takanashi — the ordinary human twin, the *translator* between worlds | Translates raw verbatims into something the model can understand | **H**euristic **I**nput **M**apping & **A**rray **R**eduction **I**nterface |
+| **HIKARI** | Hikari Takanashi — the vampire, *perceptive* and direct | Perceives the complaint driver signal in preprocessed text | **H**igh-dimensional **I**nference & **K**ey-driver **A**nalysis **R**outing **I**ntelligence |
