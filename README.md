@@ -128,7 +128,7 @@ Topics were one-hot encoded into a binary multi-hot label matrix `y` of shape `(
 **Notebook:** `PII_Scrubber_LSTM_Model_-_MACHI_v1.ipynb`
 
 #### Purpose
-Prevent downstream storage or analysis of personally identifiable customer information. MACHI runs before any text leaves the preprocessing stage. The dullahan reference isn't just aesthetic — like Machi herself, the whole point is to keep certain things *separated*.
+Prevent downstream storage or analysis of personally identifiable customer information. MACHI runs before any text leaves the preprocessing stage.
 
 #### Architecture (v1 — Training Reference)
 The training notebook implements a **Bidirectional LSTM** sequence tagger:
@@ -176,7 +176,7 @@ MACHI uses a **two-pass hybrid** approach for robustness:
 **Notebook:** `Complaint_Driver_Preprocessing_Script_-_HIMARI_v2.ipynb`
 
 #### Purpose
-HIMARI is the orchestration layer that sits between raw CRM data and the HIKARI classifier. It is channel-aware — it knows that an email complaint looks structurally different from a web form submission — and applies appropriate extraction before normalising and feeding into HIKARI. Think of Himari as the human in the room: she doesn't have supernatural abilities, but she understands the context everyone else is operating in and makes the pipeline actually work.
+HIMARI is the orchestration layer that sits between raw CRM data and the HIKARI classifier. It is channel-aware — it knows that an email complaint looks structurally different from a web form submission — and applies appropriate extraction before normalising and feeding into HIKARI. 
 
 #### Processing Steps
 
@@ -210,7 +210,7 @@ HIMARI v2 includes a `process_cases()` function that ingests a Spark-loaded comp
 **Notebook:** `Complaint_Driver_LSTM_RNN_Model_-_HIKARI_v2.ipynb`
 
 #### Purpose
-Multi-label classification of preprocessed customer verbatims into complaint driver categories. Designed to operate at scale on CRM exports, replacing manual TextIQ classification for new incoming complaints. The name fits: HIKARI is perceptive, fast, and goes straight to the point.
+Multi-label classification of preprocessed customer verbatims into complaint driver categories. Designed to operate at scale on CRM exports, replacing manual TextIQ classification for new incoming complaints.
 
 #### Model Architecture
 
@@ -495,7 +495,7 @@ def predict_drivers(req: Request):
 
 ## The Names
 
-The three components are named after characters from *Interviews with Monster Girls* (*Demi-chan wa Kataritai*) — an anime about a high school teacher who genuinely wants to understand the demi-humans in his class. It felt right for a project built around *listening* to people at their most frustrated. The names also happen to backronym perfectly into their actual technical roles, which I consider a minor victory.
+The three components are named after characters from *Interviews with Monster Girls* (*Demi-chan wa Kataritai*) — an anime about a high school teacher who genuinely wants to understand the demi-humans in his class. It felt right for a project built around *listening* to people at their most frustrated. The names also happen to backronym perfectly into their actual technical roles.
 
 | Name | Character | Role in pipeline | Expanded acronym |
 |------|-----------|-----------------|-----------------|
